@@ -4,9 +4,9 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 }
 
 # List of services to be started
-$serviceNames = ('MSSQLSERVER')
+$serviceNames = ('DapodikWebSrv','DapodikDB')
 
-Write-Host '>> STOP SERVICES <<' -BackgroundColor White -ForegroundColor DarkRed
+Write-Host '>> MENGHENTIKAN SERVICES <<' -BackgroundColor White -ForegroundColor DarkRed
 Write-Host ''
 
 foreach ($serviceName in $serviceNames) {
@@ -21,7 +21,7 @@ foreach ($serviceName in $serviceNames) {
             break
         }
         else {
-            Write-Host 'Stopping...' -ForegroundColor Gray
+            Write-Host 'Menghentikan...' -ForegroundColor Gray
             Stop-Service $ServiceName
             $service.Refresh()
         }

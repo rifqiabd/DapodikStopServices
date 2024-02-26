@@ -1,13 +1,23 @@
-# Start-Stop-Dev-Services
+# Start-Stop-Dapodik-Services
 
-If you aim to use it, I'd recommend to adapt the `$serviceNames` to your needs. This is my current usage:
+## Instalasi
+clone repo ini melalui
 
-~~`$serviceNames = ('MSSQLSERVER', 'RabbitMQ', 'com.docker.service')`~~
+'git clone https://github.com/rifqiabd/DapodikStopServices.git'
 
-`$serviceNames = ('MSSQLSERVER')`
+atau bisa kalian download melalui button download di button '<>Code' di atas repo ini
 
-I also created shortcuts on my desktop, to have them easily accessible, using the following target:
+## Penggunaan
+Sesuaikan nama services anda melalui variabel ini pada line 7
 
-`C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "C:\Foo\Bar\XXXX-services.ps1" -WindowsStyle Hidden`
+contoh punyaku
+`$serviceNames = ('DapodikDB','DapodikWebSrv')`
 
-I wrote a little bit about this here: <https://davidsonsousa.net/blog/post/using-powershell-scripts-to-start-and-stop-windows-services>
+Aku juga membuat sebuah Shortcut dari Desktop dan menambahkan kode ini pada 'target' melalui 'Properties' 
+
+`C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "C:\tempat\file\anda\XXXX-services.ps1" -WindowsStyle Hidden`
+
+ganti 'C:\tempat\file\anda\XXXX-services.ps1' sesuai dengan lokasi dan nama file kalian.
+
+## Blogs and Tutorial
+Coming Soon

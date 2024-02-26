@@ -4,9 +4,9 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 }
 
 # List of services to be started
-$serviceNames = ('MSSQLSERVER')
+$serviceNames = ('DapodikWebSrv','DapodikDB')
 
-Write-Host '>> START SERVICES <<' -BackgroundColor White -ForegroundColor DarkGreen
+Write-Host '>> MEMULAI SERVICES <<' -BackgroundColor White -ForegroundColor DarkGreen
 Write-Host ''
 
 foreach ($serviceName in $serviceNames) {
@@ -22,7 +22,7 @@ foreach ($serviceName in $serviceNames) {
         }
         else {
             Start-Service $ServiceName
-            Write-Host 'Starting...' -ForegroundColor Gray
+            Write-Host 'Memulai...' -ForegroundColor Gray
             $service.Refresh()
         }
     }
